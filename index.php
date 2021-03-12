@@ -39,17 +39,30 @@ function pesel($pesel){
 }
 echo pesel("01082507575");
 
-echo "<br>Zadanie piąte: Jaką figure chcesz policzyć ? trojkat / prostokat / trapez ";
+echo "<br>Zadanie piąte: <br>";
 
-echo ('<form action="#">
+function triangle($a, $h){
+    $score = ($a * $h)/2;
+    return $score;
+}
+echo "Pole Trójkąta: ";
+echo triangle(4, 2);
 
-    <input type="radio" name="trojkąt" value="<?php echo trojkąt ?>" > <br>
-    <input type="radio" name="kwadrat" value="kwadrat"> <br>
-    <input type="radio" name="trapez" value="trapez>
+function rectangle($a, $b){
+    $score = $a*$b;
+    return $score;
+}
 
-</form>')
+echo "<br> Pole prostokąta: ";
+echo rectangle(5, 6);
 
+function trapeze($a, $b, $h){
+    $score = (($a+$b)*$h)/2;
+    return $score;
+}
 
+echo "<br> Pole trapezu: ";
+echo trapeze(2,2,8);
 
 ?>
 
